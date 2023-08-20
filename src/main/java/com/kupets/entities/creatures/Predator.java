@@ -1,4 +1,7 @@
-package main.java.com.kupets;
+package main.java.com.kupets.entities.creatures;
+
+import main.java.com.kupets.Point;
+import main.java.com.kupets.entities.Entity;
 
 public class Predator extends Creature {
     private int attackPower;
