@@ -1,4 +1,6 @@
-package main.java.com.kupets;
+package main.java.com.kupets.entities;
+
+import main.java.com.kupets.Point;
 
 public abstract class Entity {
     protected String typeOfEntity;
