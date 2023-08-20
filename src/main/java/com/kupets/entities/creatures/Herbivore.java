@@ -1,6 +1,9 @@
-package main.java.com.kupets;
+package main.java.com.kupets.entities.creatures;
 
-public class Herbivore extends Creature{
+import main.java.com.kupets.Point;
+import main.java.com.kupets.entities.creatures.Creature;
+
+public class Herbivore extends Creature {
     public Herbivore(Point point, int speed, int healthPoint) {
         super(point, speed, healthPoint);
         super.typeOfEntity = "\uD83D\uDC07"; // Emoji code of rabbit 🐇
