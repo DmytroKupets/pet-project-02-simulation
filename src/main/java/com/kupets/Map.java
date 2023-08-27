@@ -1,11 +1,9 @@
 package main.java.com.kupets;
 
 import main.java.com.kupets.entities.Entity;
+import main.java.com.kupets.entities.creatures.Herbivore;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Map {
 
@@ -35,6 +33,12 @@ public class Map {
         entity.setPoint(point);
         map.put(point,entity);
     } */
+
+
+    public HashMap<Point, Entity> getMap() {
+        return map;
+    }
+
     public void entityPut(Point point, Entity entity){
         entity.setPoint(point);
         map.put(point,entity);
@@ -42,6 +46,9 @@ public class Map {
     public String getDisplayEntity(Point keyToFind){
         Entity value = map.get(keyToFind);
         return value != null ? value.getTypeOfEntity() : "\uD83D\uDFEB";
+    }
+    public Entity getEntity(Point point){
+        return map.get(point);
     }
 
     public boolean isEmpty(Point keyToFind) {
@@ -54,5 +61,8 @@ public class Map {
 
     public int getHeight() {
         return height;
+    }
+    public Set<Point> getPoints(){
+        return map.keySet();
     }
 }

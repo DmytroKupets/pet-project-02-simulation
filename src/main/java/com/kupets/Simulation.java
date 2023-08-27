@@ -2,6 +2,8 @@ package main.java.com.kupets;
 
 import main.java.com.kupets.actions.Actions;
 import main.java.com.kupets.actions.initAction.*;
+import main.java.com.kupets.entities.creatures.Creature;
+import main.java.com.kupets.entities.creatures.Herbivore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +25,12 @@ public class Simulation {
             entity.perform(map);
         }
         drowMap(map);
+
+
     }
     public void pauseSimulation(){
 
     }
-
-
     private void createActions(Map map, List<Actions> initActions){
         initActions.add(new GrassSpawn(map));
         initActions.add(new RockSpawn(map));
